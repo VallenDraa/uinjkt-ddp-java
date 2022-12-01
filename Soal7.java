@@ -6,15 +6,13 @@ class Matriks {
   private static int KOLOM = 4;
   private Double[][] arr; 
 
-  public Matriks(String _name) {
+  public Matriks(Scanner sc, String _name) {
     name = _name;
     arr = new Double[BARIS][KOLOM];
-    initData();
+    initData(sc);
   }
 
-  public void initData() {
-    Scanner sc = new Scanner(System.in);
-
+  public void initData(Scanner sc) {
     System.out.println("Inisialisasi Matriks " + name );
     for (int i = 0; i < BARIS; i++) {
       for (int j = 0; j < KOLOM; j++) {
@@ -23,14 +21,14 @@ class Matriks {
         sc.nextLine();
       }
     }
-
-    sc.close();
   }
   
   public void tambahDuaMatriks(Matriks matriks) {
+    System.out.println("\nHasil Cetak " + name);
+
     for (int i = 0; i < Matriks.BARIS; i++) {
       for (int j = 0; j < Matriks.KOLOM; j++) {
-        arr[i][j] = matriks.getArr()[i][j];        
+        arr[i][j] = arr[i][j] + matriks.getArr()[i][j];        
       }
     }
   }
@@ -40,6 +38,8 @@ class Matriks {
   } 
 
   public void cetakMatriks() {
+    System.out.println("");
+
     for (int i = 0; i < BARIS; i++) {
       for (int j = 0; j < KOLOM; j++) {
         System.out.print(arr[i][j] + " ");
@@ -52,10 +52,16 @@ class Matriks {
 
 public class Soal7 {
   public static void main(String[] args) {
-    Matriks matriks1 = new Matriks("Matriks 1");
-    Matriks matriks2 = new Matriks("Matriks 2");
+    Scanner sc = new Scanner(System.in);
+
+    Matriks matriks1 = new Matriks(sc, "Matriks 1");
+    Matriks matriks2 = new Matriks(sc, "Matriks 2");
   
     matriks1.tambahDuaMatriks(matriks2);
+    
+    ClearScreen.run();
     matriks1.cetakMatriks();
+
+    sc.close();
   }
 }

@@ -50,6 +50,7 @@ public class Soal1 {
 
         // ketika user sudah memasukkan semua jumlah mobil yang terjual
         agus.hitungKomisi();
+        ClearScreen.run();
         System.out.println("Komisi yang diterima Bapak Agus adalah Rp." + agus.getTotalKomisi());
         sc.close();
     }
