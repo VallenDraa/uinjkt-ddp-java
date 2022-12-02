@@ -84,7 +84,8 @@ public class Soal6 {
     
     // menerima data dari user
     for (int i = 0; i < mahasiswa.length; i++) {
-      ClearScreen.run();
+      System.out.print("\033[H\033[2J");  
+      System.out.flush();  
       System.out.println("Data Mahasiswa Ke - " + (i + 1));
       mahasiswa[i] = new Mahasiswa(sc);
       mahasiswa[i].hitungNilaiAkhir();
@@ -92,7 +93,8 @@ public class Soal6 {
     }
     
     // menampilkan nilai akhir masing masing mahasiswa
-    ClearScreen.run();
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
     System.out.println("List Nilai Akhir Mahasiswa");
     System.out.println("---------------------------");
     for (Mahasiswa mhs : mahasiswa) {

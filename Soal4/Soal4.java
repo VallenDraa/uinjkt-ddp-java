@@ -1,3 +1,5 @@
+// program ini akan menentukan apakah sebuah tahun diantara 1945 dan 2022 adalah tahun kabisat 
+
 import java.util.Scanner;
 
 public class Soal4 {

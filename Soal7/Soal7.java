@@ -59,7 +59,8 @@ public class Soal7 {
   
     matriks1.tambahDuaMatriks(matriks2);
     
-    ClearScreen.run();
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
     matriks1.cetakMatriks();
 
     sc.close();

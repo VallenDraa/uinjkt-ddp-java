@@ -132,7 +132,8 @@ public class Soal5 {
 
     while (true) {
 
-      ClearScreen.run();
+      System.out.print("\033[H\033[2J");  
+      System.out.flush();  
       System.out.println("Toko sepatu ABC");
       System.out.println("1. Beli Sepatu");
       System.out.println("2. Keluar Dari Program");
@@ -153,7 +154,8 @@ public class Soal5 {
 
   static void menuCatalogSepatu() {
     int input = 0;
-    ClearScreen.run();
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
 
     for (int i = 0; i < Toko.merekTersedia.size(); i++) {
       System.out.printf("%d. %s\n", (i + 1), Toko.merekTersedia.get(i).nama);
@@ -173,7 +175,8 @@ public class Soal5 {
 
   static void menuPembelian(String nama, int idxSepatu) {
     int input;
-    ClearScreen.run();
+    System.out.print("\033[H\033[2J");  
+    System.out.flush();  
     System.out.println("Data sepatu merek " + nama);
 
     // mencetak dan meminta user untuk memasukkan ukuran yang diinginkan
@@ -197,7 +200,8 @@ public class Soal5 {
           abc.kurangiStok(nama, size);
           abc.tambahProfit(abc.stok.get(nama)[input - 1].getSepatu().getHarga());
      
-          ClearScreen.run();
+          System.out.print("\033[H\033[2J");  
+          System.out.flush();  
           System.out.print("Pembelian berhasil !");
           sc.nextLine();
           break;
