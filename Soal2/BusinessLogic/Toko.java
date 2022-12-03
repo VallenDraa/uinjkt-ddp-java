@@ -1,8 +1,7 @@
 package BusinessLogic;
 
-// business logic Toko
 public class Toko {
-  private final double DISKON_300 = 0.05;
+   private final double DISKON_300 = 0.05;
   private final double DISKON_500 = 0.1;
   
   private Double diskon = 0.0;

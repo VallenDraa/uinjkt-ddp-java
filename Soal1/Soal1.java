@@ -29,9 +29,6 @@ public class Soal1 {
     agus.hitungKomisi();
     
     // clear screen
-    System.out.print("\033[H\033[2J");  
-    System.out.flush();  
-
     System.out.println("Komisi yang diterima Bapak Agus adalah Rp." + agus.getTotalKomisi());
     sc.close();
   }
